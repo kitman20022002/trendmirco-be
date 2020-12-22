@@ -8,3 +8,7 @@ exports.getWeatherByCityID = (city_id) => {
 exports.getCities = (city) => {
     return axios.get(config.metaweatherapi + '/api/location/search/?query=' + city);
 }
+
+exports.getCityByLattLong = (latt, long) => {
+    return axios.get(config.metaweatherapi + `/api/location/search/?lattlong=${latt},${long}`);
+}

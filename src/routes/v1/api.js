@@ -8,5 +8,6 @@ const weatherValidation = require("../../validations/weatherValidations");
 
 router.get('/cities', citiesValidation.getCitiesValidation(), citiesControllers.index);
 router.get('/weathers', weatherValidation.getWeathersValidation(), weathersControllers.index);
+router.get('/get-currently-city', citiesValidation.getCurrentCityValidation(), citiesControllers.getCurrentCity);
 
 module.exports = router;
